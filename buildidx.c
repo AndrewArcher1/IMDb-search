@@ -11,6 +11,7 @@ int main( int argc, char *argv[]){
       exit(1);
    }
    
+   //creates the vars for the project
    int k=0;
    int i =0;
    int j=0;
@@ -31,22 +32,26 @@ int main( int argc, char *argv[]){
    strncpy(fileName1, argv[1], strlen(argv[1])-3);
    strcpy(fileName2, fileName1);
   
-
+   //creates the files
    fp_kv = fopen(argv[1], "r");
    fp_khs = fopen(strcat(fileName1,".khs"),"wb+");
    fp_vhs = fopen(strcat(fileName2,".vhs"),"wb+");
    
+   //sets up the new files
    write_empty(fp_khs,capacity);
    write_empty(fp_vhs,capacity);
 
    int index =0;
    
    do{
+	 
+      
 
       i = read_keyval(fp_kv, key, val);
       read_val(fp_kv,j,val);
       read_key(fp_kv,k,key);
       
+      //sets the hash values
       hashV = hashfn(val, capacity);
       hashK = hashfn(key, capacity);
 
@@ -78,12 +83,13 @@ int main( int argc, char *argv[]){
       }
 
       if(index == -1){
-      write_index(fp_khs,k,hashV);
+      write_index(fp_khs,k,hashK);
       k++;
       }
 
    }while( i == 2 );
-
+   
+   //closes the files
    fclose(fp_kv);
    fclose(fp_khs);
    fclose(fp_vhs);
