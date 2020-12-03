@@ -21,17 +21,13 @@ Building indexes
 Compiling and linking gradeA6_buildidx
 Found gradeA6_buildidx
 Compilation succeeded
-buildidx nb.khs 3383 failed
-  '-1\n'!='1\n'
+buildidx nb.khs 3383 passed
 buildidx nb.vhs 1274 passed
-buildidx nb.khs 3384 failed
-  '-1\n'!='165\n'
+buildidx nb.khs 3384 passed
 buildidx nb.vhs 2559 passed
-buildidx tb.khs 8661 failed
-  '-1\n'!='1\n'
+buildidx tb.khs 8661 passed
 buildidx tb.vhs 1152 passed
-buildidx tp.khs 8102 failed
-  '-1\n'!='9\n'
+buildidx tp.khs 8102 passed
 buildidx bp.vhs 294 passed
 Compiling and linking key2val
 Found key2val
@@ -63,6 +59,6 @@ bacon1 'Steve Golin' failed
   ''!='Sleepers\n'
 Found makefile
 Correct options
-No comments
-Indentation levels are: ['', '  ', '   ', '      ', '        ', '         ', '           ']
-Assignment submitted by Andrew Archer <aarche01@uoguelph.ca> at: Tue Nov 17 23:55:06 2020
+Comments
+Indentation levels are: ['', '\t ', '  ', '   ', '      ', '        ', '         ', '           ']
+Assignment submitted by Andrew Archer <aarche01@uoguelph.ca> at: Wed Dec 2 23:50:29 2020
